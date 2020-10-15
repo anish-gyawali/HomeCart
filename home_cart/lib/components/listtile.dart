@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 
 class Tiles extends StatelessWidget {
-
-  Tiles({
-    this.contentPadding,
-    this.dense,
-    this.hoverColor,
-    this.isEnabled,
-    this.leading,
-    this.onLongPress,
-    this.onTap,
-    this.selectedTileColor,
-    this.shape,
-    this.subtitle,
-    this.tileColor,
-    this.title,
-    this.trailing,
-    this.visualDensity
-  });
+  Tiles(
+      {this.contentPadding,
+      this.dense,
+      this.hoverColor,
+      this.isEnabled,
+      this.leading,
+      this.onLongPress,
+      this.onTap,
+      this.selectedTileColor,
+      this.shape,
+      this.subtitle,
+      this.tileColor,
+      this.title,
+      this.trailing,
+      this.visualDensity});
 
   final EdgeInsetsGeometry contentPadding;
   final bool dense;
@@ -34,25 +32,31 @@ class Tiles extends StatelessWidget {
   final Widget trailing;
   final VisualDensity visualDensity;
 
-  
-
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding:contentPadding,
-    dense:dense,
-    hoverColor:hoverColor ?? Colors.amber,
-    enabled:isEnabled ?? true,
-    leading: leading,
-    onLongPress: onLongPress ?? (){AlertDialog(content: Text('Hero Anish'),);},
-    onTap: onTap ?? (){},
-    selectedTileColor: selectedTileColor,
-    shape: shape,
-    subtitle: subtitle,
-    tileColor: tileColor,
-    title: title,
-    trailing: trailing,
-    visualDensity: visualDensity,
+    return Container(
+      child: ListTile(
+        contentPadding: contentPadding,
+        dense: dense,
+        hoverColor: hoverColor ?? Colors.amber,
+        enabled: isEnabled ?? true,
+        leading: leading,
+        onLongPress: onLongPress ??
+            () {
+              AlertDialog(
+                content: Text('Hero Anish'),
+              );
+            },
+        onTap: onTap ?? () {},
+        selectedTileColor: selectedTileColor,
+        shape: shape ??
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        subtitle: subtitle,
+        tileColor: tileColor,
+        title: title,
+        trailing: trailing,
+        visualDensity: visualDensity,
+      ),
     );
   }
 }

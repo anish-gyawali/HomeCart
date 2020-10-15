@@ -24,10 +24,10 @@ class BasicCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-       elevation: elevation ?? 8.0,
+       elevation: elevation ?? 20.0,
        child: child,
        clipBehavior: clipBehaviour,
-       color: color,
+       color: color ?? Colors.red[100],
        borderOnForeground: borderOnForeground ?? false,
        shadowColor: shadowColor,
        shape: shape,

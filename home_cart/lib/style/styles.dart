@@ -31,8 +31,39 @@ class Styles {
     ],
   );
 
+  static TextStyle pageHeading = TextStyle(
+    letterSpacing: 1.5,
+    color: Colors.lime[200],
+    fontSize: 28,
+    fontStyle: FontStyle.italic,
+    fontWeight: FontWeight.bold,
+    shadows: <Shadow>[
+      Shadow(
+        offset: Offset(1.0, 2.0),
+        blurRadius: 2.0,
+      ),
+      Shadow(
+        offset: Offset(4.0, 2.0),
+        blurRadius: 8.0,
+      ),
+    ],
+  );
+
+  static TextStyle cardHeading = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle listHeading = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black87
+  );
+
   static double width = double.infinity;
   static double height = double.infinity;
+
+  
 
 
 }
