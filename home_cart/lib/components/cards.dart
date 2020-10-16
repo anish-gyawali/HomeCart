@@ -27,10 +27,11 @@ class BasicCard extends StatelessWidget {
        elevation: elevation ?? 20.0,
        child: child,
        clipBehavior: clipBehaviour,
-       color: color ?? Colors.red[100],
+       color: color,
        borderOnForeground: borderOnForeground ?? false,
        shadowColor: shadowColor,
-       shape: shape,
+       shape: shape ?? RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0)),
     );
   }
 }

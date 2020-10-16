@@ -29,19 +29,25 @@ class _NavigationBarState extends State<NavigationBar> {
       drawer: MainDrawer(),
       body: tabs[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.format_list_bulleted),
-              title: Text('Daily List')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), title: Text('Profile')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text('login')),
-        ],
-        currentIndex: selectedIndex,
-        backgroundColor: Colors.indigo[300],
-        selectedItemColor: Colors.red[600],
+
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home')
+          ),
+        
+        BottomNavigationBarItem(
+            icon: Icon(Icons.my_library_books_outlined),
+            title: Text('Daily List')
+          ),
+        
+        BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile')
+          ),
+      ],
+      currentIndex: selectedIndex,
+        selectedItemColor: Colors.orange[700],
         onTap: _onItemTapped,
       ),
     );

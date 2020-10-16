@@ -47,7 +47,7 @@ class _ChklistState extends State<Chklist> {
       controlAffinity:
           widget.controlAffinity ?? ListTileControlAffinity.leading,
       checkColor: widget.checkColor ?? Colors.black,
-      activeColor: widget.activeColor ?? Colors.purple[200],
+      activeColor: widget.activeColor ?? Colors.purple[400],
       isThreeLine: widget.isThreeLine ?? false,
       dense: widget.dense ?? true,
       value: widget.value ?? false,

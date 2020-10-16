@@ -39,6 +39,7 @@ class _DailyListState extends State<DailyList> {
           width: Styles.width,
           decoration: Styles.boxdeco,
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
             child: Column(children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -49,15 +50,18 @@ class _DailyListState extends State<DailyList> {
                   return Padding(
                     padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                     child: BasicCard(
-                      child: Chklist(
-                        controlAffinity: ListTileControlAffinity.trailing,
-                        value: dl.values,
-                        onChanged: (value) {
-                          setState(() {
-                            dl.values = value;
-                          });
-                        },
-                        text: dl.listTitle,
+                      child: Container(
+                        decoration: Styles.tilesDeco,
+                        child: Chklist(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          value: dl.values,
+                          onChanged: (value) {
+                            setState(() {
+                              dl.values = value;
+                            });
+                          },
+                          text: dl.listTitle,
+                        ),
                       ),
                     ),
                   );
@@ -67,8 +71,9 @@ class _DailyListState extends State<DailyList> {
           ),
         ),
         floatingActionButton: FloatingActionButton.extended(
-          icon: Icon(Icons.add),
-          label: Text('Add New Item(s)'),
+          backgroundColor: Colors.orange[700],
+          icon: Icon(Icons.add, color: Colors.black,),
+          label: Text('New Item(s)', style: Styles.floatButton,),
           onPressed: () {},
         ),
       ),

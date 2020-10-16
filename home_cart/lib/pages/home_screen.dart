@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:home_cart/components/cards.dart';
 import 'package:home_cart/components/listtile.dart';
 import 'package:home_cart/style/styles.dart';
@@ -45,13 +47,14 @@ class _HomeState extends State<Home> {
           width: Styles.width,
           decoration: Styles.boxdeco,
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
             child: Column(children: <Widget>[
               SizedBox(
                   width: width,
                   child: Container(
                       alignment: Alignment.center,
                       child: Text(
-                        'Shopping List..',
+                        'Customized\nShopping Lists',
                         style: Styles.pageHeading,
                         textAlign: TextAlign.center,
                       )),
@@ -62,18 +65,19 @@ class _HomeState extends State<Home> {
                   children: shoppingTitle.map((titles) {
                     return BasicCard(
                       elevation: 20,
-                      color: Colors.red[100],
-                      child: Tiles(
-                        leading: Icon(titles.leadingIcon),
-                        title: Text(
-                          titles.listTitle,
-                          style: Styles.cardHeading,
+                      child: Container(
+                        decoration: Styles.tilesDeco,
+                        child: Tiles(
+                          leading: Icon(titles.leadingIcon),
+                          title: Text(
+                            titles.listTitle,
+                            style: Styles.cardHeading,
+                          ),
+                          trailing: IconButton(
+                              icon: Icon(Icons.delete_forever),
+                              onPressed: titles.onPress),
+                          
                         ),
-                        trailing: IconButton(
-                            icon: Icon(Icons.delete_forever),
-                            onPressed: titles.onPress),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
                       ),
                     );
                   }).toList(),
@@ -83,8 +87,9 @@ class _HomeState extends State<Home> {
           ),
         ),
         floatingActionButton: FloatingActionButton.extended(
-          icon: Icon(Icons.add),
-          label: Text('Add New'),
+          backgroundColor: Colors.orange[700],
+          icon: Icon(Icons.add, color: Colors.black,),
+          label: Text('New List(s)', style: Styles.floatButton,),
           onPressed: () {},
         ),
       ),

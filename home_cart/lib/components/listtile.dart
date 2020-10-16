@@ -50,7 +50,7 @@ class Tiles extends StatelessWidget {
         onTap: onTap ?? () {},
         //selectedTileColor: selectedTileColor,
         shape: shape ??
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
         subtitle: subtitle,
         //tileColor: tileColor,
         title: title,

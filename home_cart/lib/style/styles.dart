@@ -12,15 +12,26 @@ class Styles {
     ]),
   );
 
+  static BoxDecoration tilesDeco = BoxDecoration(
+    borderRadius: BorderRadius.all(Radius.circular(15)),
+    gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: <Color>[
+      Colors.blue[300],
+      Colors.limeAccent[100],
+    ]),
+  );
+
   static TextStyle heading1 = TextStyle(
-    color: Colors.purple[300],
+    color: Colors.purple[400],
     fontSize: 34,
     fontStyle: FontStyle.italic,
     fontWeight: FontWeight.bold,
     shadows: <Shadow>[
       Shadow(
         offset: Offset(1.0, 2.0),
-        blurRadius: 1.0,
+        blurRadius: 2.0,
         color: Color.fromARGB(255, 0, 0, 0),
       ),
       Shadow(
@@ -39,8 +50,8 @@ class Styles {
     fontWeight: FontWeight.bold,
     shadows: <Shadow>[
       Shadow(
-        offset: Offset(1.0, 2.0),
-        blurRadius: 2.0,
+        offset: Offset(2.0, 4.0),
+        blurRadius: 4.0,
       ),
       Shadow(
         offset: Offset(4.0, 2.0),
@@ -57,6 +68,12 @@ class Styles {
   static TextStyle listHeading = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
+    color: Colors.black87
+  );
+
+  static TextStyle floatButton = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
     color: Colors.black87
   );
 
