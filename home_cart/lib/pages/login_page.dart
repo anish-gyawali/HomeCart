@@ -15,7 +15,16 @@ class _LoginState extends State<Login> {
           children: <Widget>[
             SizedBox(height: 80),
             Column(
-              children: <Widget>[SizedBox(height: 20.0), Text("Login")],
+              children: <Widget>[
+                SizedBox(height: 20.0),
+                Text(
+                  "Login",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
+                )
+              ],
             ),
             SizedBox(height: 50.0),
             TextField(
