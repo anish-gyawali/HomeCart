@@ -48,11 +48,11 @@ class Tiles extends StatelessWidget {
               );
             },
         onTap: onTap ?? () {},
-        selectedTileColor: selectedTileColor,
+        //selectedTileColor: selectedTileColor,
         shape: shape ??
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         subtitle: subtitle,
-        tileColor: tileColor,
+        //tileColor: tileColor,
         title: title,
         trailing: trailing,
         visualDensity: visualDensity,

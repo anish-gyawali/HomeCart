@@ -18,12 +18,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Home> shoppingTitle = [
     Home(
-      leadingIcon: Icons.cake_rounded,
+      leadingIcon: Icons.cake,
       listTitle: 'Anish\'s Birthday',
       onPress: () {},
     ),
     Home(
-      leadingIcon: Icons.train_sharp,
+      leadingIcon: Icons.train,
       listTitle: 'Colorado Trip',
       onPress: () {},
     ),
@@ -56,13 +56,10 @@ class _HomeState extends State<Home> {
                         textAlign: TextAlign.center,
                       )),
                   height: 198),
-
-
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Column(
                   children: shoppingTitle.map((titles) {
-
                     return BasicCard(
                       elevation: 20,
                       color: Colors.red[100],
@@ -80,12 +77,11 @@ class _HomeState extends State<Home> {
                       ),
                     );
                   }).toList(),
-
-                ),),
+                ),
+              ),
             ]),
           ),
         ),
-
         floatingActionButton: FloatingActionButton.extended(
           icon: Icon(Icons.add),
           label: Text('Add New'),
